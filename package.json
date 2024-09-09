@@ -7,6 +7,13 @@
     "preview": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "nitropack": "latest"
+    "@types/node": "^22.5.4",
+    "nitropack": "latest",
+    "prisma": "^5.19.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1"
   }
 }

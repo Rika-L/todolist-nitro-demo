@@ -1,16 +1,12 @@
-import {type addTodoType} from "~/type";
 import prisma from "~/db";
-
-function isAddTodoType(value: any): value is addTodoType {
-    return value &&
-        typeof value.title === "string" &&
-        typeof value.time === "string"
-}
+import {isAddTodoType} from "~/utils/isAddTodoType";
 
 
 export default defineEventHandler(async (event) => {
     const body = (await readBody(event))
     if (isAddTodoType(body)) {
+
+
         await prisma.todolist.create({
             data: {
                 title: body.title,

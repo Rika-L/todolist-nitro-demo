@@ -9,6 +9,12 @@ const useRes = {
             code: 200,
             msg: 'success'
         }
+    },
+    error: function (code: number, msg: string) {
+        return {
+            code,
+            msg
+        }
     }
 }
 

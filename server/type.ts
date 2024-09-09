@@ -4,7 +4,11 @@ export interface addTodoType {
 }
 
 
-export interface todoType extends addTodoType{
-    id: string
+export interface editTodoType extends addTodoType {
     isCheck: boolean
+}
+
+
+export interface todoType extends editTodoType {
+    id: string
 }

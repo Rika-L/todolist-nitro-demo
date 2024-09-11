@@ -1,4 +1,7 @@
-// handle CORS
-export default defineEventHandler((event) => {
-    setHeader(event, 'Access-Control-Allow-Origin', '*')
+export default defineEventHandler((e) => {
+    handleCors(e, {
+        origin: '*',
+        methods: '*',
+        allowHeaders: '*',
+    })
 })

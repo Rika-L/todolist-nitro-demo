@@ -5,8 +5,6 @@ import {isAddTodoType} from "~/utils/isAddTodoType";
 export default defineEventHandler(async (event) => {
     const body = (await readBody(event))
     if (isAddTodoType(body)) {
-
-
         await prisma.todolist.create({
             data: {
                 title: body.title,

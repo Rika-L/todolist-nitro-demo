@@ -5,7 +5,6 @@ export default eventHandler(async (event) => {
     const id = getRouterParam(event, 'id')
     const body = (await readBody(event))
     if (isEditTodoType(body)) {
-        console.log(1);
         try {
             await prisma.todolist.update({
                 where: {id},
